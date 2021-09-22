@@ -1,44 +1,98 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
+# The Chatting App
 
-## Available Scripts
+1. [Introduction](#introduction)
+2. [Getting Started](#getting-started)
+3. [Usage](#usage)
+4. [Screenshots](#screenshots)
+5. [Dependencies](#dependencies)
 
-In the project directory, you can run:
+## Introduction
 
-### `yarn start`
+Login and Chat with your friends
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Getting Started
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+1. Clone the repo.
 
-### `yarn test`
+  `git clone`
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2. Go to the project directory and install all the front-end dependencies using:
 
-### `yarn build`
+  `yarn`
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+3. Run the front-end using:
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+  `yarn start`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+4. Change the directory to `/api` and install all the back-end dependencies using:
 
-### `yarn eject`
+  `pip3 install -r requirements.txt`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+5. Run the back-end using:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+  `python3 api.py`
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+6. To connect to the Mongo database, Open `/api/config.py` and:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+  - Change the value of DATABASE to your database name.
 
-## Learn More
+  - Change the value of DATABASE_HOST to your database host.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+7. Run your database server
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+The app runs by default on http://localhost:3000
+
+## Usage
+
+The home page opens with a **Login** page. You can log in to talk to everyone else currently logged in.
+
+## Screenshots
+
+1. Login page
+
+![Login page](screenshots/login.png)
+
+2. Chat page 1
+
+![Chat page 1](screenshots/chatscreen1.png)
+
+3. Chat page 2
+
+![Chat page 2](screenshots/chatscreen2.png)
+
+## Dependencies
+
+### Tools
+
+1. [Yarn](https://yarnpkg.com/)
+2. [Python3+](https://www.python.org/downloads/)
+3. [Pip](https://pip.pypa.io/en/stable/)
+4. [MongoDB](https://www.mongodb.com/)
+
+### Front-end
+
+1. @material-ui/core ^4.12.1
+2. @material-ui/icons ^4.11.2
+3. @reduxjs/toolkit ^1.5.1
+4. react ^17.0.2
+5. react-dom ^17.0.2
+6. react-redux ^7.2.3
+7. react-scripts 4.0.3
+8. socket.io-client ^4.1.3
+
+### Back-end
+
+1. bidict==0.21.3
+2. click==8.0.1
+3. colorama==0.4.4
+4. Flask==2.0.1
+5. Flask-Cors==3.0.10
+6. Flask-SocketIO==5.1.1
+7. itsdangerous==2.0.1
+8. Jinja2==3.0.1
+9. MarkupSafe==2.0.1
+10. pymongo==3.12.0
+11. python-engineio==4.2.1
+12. python-socketio==5.4.0
+13. six==1.16.0
+14. Werkzeug==2.0.1
